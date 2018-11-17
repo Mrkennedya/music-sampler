@@ -1,0 +1,101 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'PT Serif', 'Bodoni MT', 'Georgia', serif;
+  background-color: #242424;
+}
+
+article {
+  max-width: 1060px;
+  background-color: #dedede;
+  color: #242222;
+  margin: auto;
+  grid-template-columns: repeat(5, auto);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+        "header header header header header"
+        "opening opening opening opening opening"
+        "container container container container container"
+        "container container container container container"
+        "footer footer footer footer footer";
+}
+
+header {
+  text-align: center;
+  grid-area: header;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+.images {
+  ;
+}
+
+.opening {
+  grid-area: opening;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+.container {
+  grid-area: container;
+  padding: 1rem;
+  margin: 0rem;
+}
+
+footer {
+  grid-area: footer;
+  padding: 5px;
+  margin: auto;
+  background-color: #000;
+  color: #fcfcfc;
+}
+
+caption {
+  font-size: 10px;
+}
+
+h1, h2, h3 {
+  font-family: 'Roboto', 'Geneva', 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+#kendrickImage {
+  display: block;
+  width: 100%;
+  height: auto;
+
+}
+
+
+@media screen and (max-width: 780px) {
+
+  h1 {
+    font-size: 30px;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .container {
+    grid-template-columns: repeat(4, auto);
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas:
+          "header header header header"
+          "opening opening opening opening"
+          "container container container container"
+          "footer footer footer footer";
+  }
+
+}
